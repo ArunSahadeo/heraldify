@@ -58,11 +58,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
   bcrypt
   dotenv
   fileutils
   pg
+  rack
   rake
   sinatra
   sinatra-activerecord
