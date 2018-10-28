@@ -4,3 +4,4 @@ node_modules/
 config/database.yml
 .bundle
 vendor
+lib/heraldify/public/dist/
