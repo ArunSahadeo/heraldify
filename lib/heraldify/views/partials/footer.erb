@@ -1,0 +1,22 @@
+<footer>
+        <% settings.assets['scripts'].each do |script| %>
+            <script src="<%= "#{settings.assets['folder']}/#{script['filename']}"  %>"<%= script['async'] ? ' async' : '' %><%= script['defer'] ? ' defer="defer"' : '' %> />
+        <% end %>
+	<script async defer src="/dist/scripts.min.js"></script>
+
+	<ul>
+            <% if defined?(settings.pages['footer']) %>
+                <% settings.pages['footer'].to_a.each do |page| %>
+                    <li>
+                        <a href="<%= page['route'] %>">
+                            <%= page['title'] %>
+                        </a>
+                    </li>
+                <% end %>
+            <% end %>
+	</ul>
+
+	<p class="copyright">
+            Copyright &copy; <%= settings.brand['name'] || 'Heraldify' %> <%= settings.year %>. All rights reserved.
+	</p>
+</footer>

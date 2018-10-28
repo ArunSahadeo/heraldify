@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title><%= !@title.to_s.empty? ? @title.to_s + ' | Heraldify' : 'The no. 1 destination for curated news | Heraldify' %> </title>
+		<link rel="stylesheet" href="/dist/vendor.css" />
+		<link rel="stylesheet" href="/dist/styles.css" />
+                <% if defined? (@author) %>
+                <link rel="author" content="<%= @author %>">
+                <% end %>
+    </head>
+<body>
+	<%= erb :'partials/header' %>
+        <section class="main padding-top-50">
+	    <%= yield %>
+        </section>
+	<%= erb :'partials/footer' %>
+</body>
+</html>

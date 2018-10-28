@@ -1,0 +1,20 @@
+<% unless defined?(@articles) == nil %>
+    <% @articles.first(settings.article_limit).each do |articles| %>
+        <% articles.each do |article| %>
+            <div class="article">
+                <article>
+
+                </article>
+            </div>
+        <% end %>
+    <% end %>
+<% else %>
+<main>
+    <div class="no-results">
+        <p>
+            Sorry, we couldn&rsquo;t find any articles.
+        </p>
+    </div>
+
+</main>
+<% end %>

@@ -1,0 +1,29 @@
+{
+  "name": "heraldify",
+  "version": "1.0.0",
+  "description": "Mini news CMS.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Arun James Sahadeo <arunjamessahadeo@gmail.com>",
+  "license": "GPL",
+  "devDependencies": {
+    "webpack": "^4.22.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^2.0.0",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  }
+}

@@ -1,0 +1,22 @@
+pages:
+    header:
+      - route: '/'
+        title: 'Home'
+      - route: '/articles'
+        title: 'News'
+    footer:
+      - route: '/api'
+        title: 'API'
+
+assets:
+    folder: '/dist'
+    styles:
+        - filename: 'styles.css'
+    scripts:
+        - filename: 'scripts.min.js'
+          defer: true
+          async: true
+
+brand:
+    name: 'Heraldify'
+    siteurl: 'http://localhost:9292'

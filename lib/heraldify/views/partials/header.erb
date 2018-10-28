@@ -1,0 +1,13 @@
+<header>
+    <ul class="site-nav text-center">
+        <% if defined?(settings.pages['header']) %>
+            <% settings.pages['header'].to_a.each do |page| %>
+                <li>
+                    <a href="<%= page['route'] %>">
+                        <%= page['title'] %>
+                    </a>
+                </li>
+            <% end %>
+        <% end %>
+    </ul>
+</header>

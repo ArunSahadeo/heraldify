@@ -1,0 +1,28 @@
+header {
+    position: absolute;
+    width: 100%;
+    min-height: 80px;
+    background: $oracle;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    ul li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+body.admin header ul li {
+    margin-right: 20px;
+} 
+
+.site-nav {
+    color: #fff;
+    font-weight: 600;
+    li {
+        display: inline;
+        margin-right: 15px;
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+}

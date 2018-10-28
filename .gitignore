@@ -1,0 +1,6 @@
+settings.yml
+.env
+node_modules/
+config/database.yml
+.bundle
+vendor
