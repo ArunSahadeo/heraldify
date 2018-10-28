@@ -1,3 +1,8 @@
+# Sinatra
+require 'sinatra/base'
+require 'sinatra/activerecord'
+require 'sinatra/contrib'
+
 require 'heraldify/routes/api'
 require 'heraldify/routes/web'
 
