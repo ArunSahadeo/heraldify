@@ -3,6 +3,9 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup(:default)
 
+require 'dotenv'
+Dotenv.load
+
 require 'sinatra/activerecord/rake'
 
 namespace :db do
