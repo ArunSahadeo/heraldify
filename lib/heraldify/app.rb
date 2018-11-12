@@ -75,6 +75,7 @@ module Heraldify
                 article.post_content = params['post_content']
                 article.featured_image = Base64.strict_encode64(params['featured_image'])
                 article.author = current_user.first_name 
+                article.user_id = current_user.id
                 article.save!
 
                 session[:success_message] = "Post #{article.id} has been created."
