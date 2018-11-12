@@ -1,0 +1,41 @@
+.grid-block {
+    //width: 100%;
+    float: left;
+
+}
+
+.grid {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+@media (min-width: 1440px) {
+    .grid {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid {
+        max-width: 960px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .grid-block {
+        &:first-child:nth-last-child(3),
+        &:first-child:nth-last-child(3) ~ .grid-block {
+            width: calc(33.33% - 25px);
+            margin-right: 15px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

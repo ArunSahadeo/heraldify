@@ -1,2 +1,22 @@
-<section class="main padding-top-50">
+<section class="main padding-top-80">
+    <% unless defined?(@articles) == nil %>  
+        <h3>
+            The three most recent articles
+        </h3>
+        <% @articles.each do |article| %>
+        <div class="grid">
+            <div class="grid-block">
+                <h3>
+                    <%= article['post_title'] %> 
+                </h3>
+
+                <img src="data:image/png;base64,<%= article['featured_image'] %>" />
+
+                <p>
+                    <%= article['post_content'] %>
+                </p>
+            </div>
+        </div>
+        <% end %>
+    <% end %>
 </section>

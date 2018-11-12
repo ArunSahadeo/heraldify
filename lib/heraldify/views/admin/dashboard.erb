@@ -1,0 +1,51 @@
+<% unless session[:success_message].nil? %>
+<% @success_message = session[:success_message] %>
+<% session.delete(:success_message) %>
+<script type="text/javascript">
+    alert("<%= @success_message %>");
+</script>
+<% end %>
+<section class="padding-top-80">
+<% if defined? (@user) %>
+<div class="welcome-banner">
+    <h1>
+        Welcome <%= @user.first_name %>
+    </h1>
+</div>
+<div class="grid">
+    <div class="grid-block">
+        <h3>
+            Current date and time  
+        </h3>
+        
+        <p>
+            <%= settings.datetime_now %>
+        </p>
+    </div>
+    <div class="grid-block">
+        <h3>
+            What you can do 
+        </h3>
+
+        <ul>
+            <li>
+                <a href="/admin/article/new">Add a new article</a>
+            </li>
+
+            <li>
+                Edit an existing article
+            </li>
+        </ul>
+    </div>
+    <div class="grid-block">
+        <h3>
+            A message from the developer  
+        </h3>
+
+        <p>
+            Just wanted to extend my thanks to you for trialling this product.
+        </p>
+    </div>
+</div>
+<% end %>
+</section>

@@ -2,7 +2,16 @@
     class="border-radius-2 border-light-grey border-2 position-absolute position-center min-height-200 padding-100 bg-maya-blue"
 >
     <div class="margin-auto">
-        <form action="/login">
+        <% if defined? @errors %>
+        <ul>
+        <% @errors.each do |error| %>
+            <li>
+                <%= error %>
+            </li>
+        <% end %>
+        </ul>
+        <% end %>
+        <form action="/login" method="POST">
             <h1 class="margin-top-0">
                 Admin login
             </h1>

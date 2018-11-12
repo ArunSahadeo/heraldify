@@ -1,0 +1,53 @@
+<div
+    class="border-radius-2 border-light-grey border-2 position-absolute position-center min-height-200 padding-50 bg-maya-blue"
+>
+    <div class="margin-auto">
+        <% if defined? @errors %>
+        <ul>
+        <% @errors.each do |error| %>
+            <li>
+                <%= error %>
+            </li>
+        <% end %>
+        </ul>
+        <% end %>
+        <form method="POST">
+
+            <h1 class="margin-top-0">
+                Add a new article
+            </h1>
+
+            <div class="margin-bottom-20">
+                <label class="display-block" for="slug">
+                    Slug:
+                </label>
+                <input type="text" name="slug" />
+            </div>
+
+            <div class="margin-bottom-20">
+                <label class="display-block" for="post_title">
+                    Post title:
+                </label>
+                <input type="text" name="post_title" /> 
+            </div>
+
+            <div class="margin-bottom-20">
+                <label class="display-block" for="post_content">
+                    Post content:
+                </label>
+                <textarea name="post_content"></textarea>
+            </div>
+
+            <div class="margin-bottom-20">
+                <label class="display-block" for="featured_image">
+                    Featured image:
+                </label>
+                <input type="file" name="featured_image" accept="image/*" />
+            </div>
+
+            <div class="margin-bottom-20">
+                <button type="submit">
+                    Add new article
+                </button>
+            </div>
+        </form>
