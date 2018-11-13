@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "",
-    "heroku-prebuild": "cp settings.yml.dist settings.yml && CONFIG_URL=`grep -F 'siteurl' settings.yml | cut -d \"'\" -f2` && sed -i \"s/CONFIG_URL/$(echo SITE_URL)/\" settings.yml && git pull && rake db:setup && rake db:migrate",
+    "heroku-prebuild": "cp settings.yml.dist settings.yml && CONFIG_URL=`grep -F 'siteurl' settings.yml | cut -d \"'\" -f2` && sed -i \"s/CONFIG_URL/$(echo SITE_URL)/\" settings.yml && rake db:setup && rake db:migrate",
     "heroku-postbuild": "webpack -p && rake db:setup && rake db:migrate"
   },
   "keywords": [],
