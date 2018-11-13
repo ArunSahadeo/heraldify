@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Mini news CMS.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "heroku-prebuild": "cp settings.yml.dist settings.yml && sed -i \"s/$(echo $(grep -F 'siteurl' settings.yml | cut -d \"'\" -f2 ))/$(echo SITE_URL)/\" settings.yml",
+    "heroku-postbuild": "webpack -p && rake db:setup && rake db:migrate"
+  },
   "keywords": [],
   "author": "Arun James Sahadeo <arunjamessahadeo@gmail.com>",
   "license": "GPL",
