@@ -3,13 +3,13 @@ $LOAD_PATH.push File.expand_path('../../../app', __FILE__)
 
 # Third party dependencies
 require 'active_support/all'
+require 'base64'
+require 'mime/types'
 
 # Sinatra
 require 'sinatra/base'
 require 'sinatra/activerecord'
 require 'sinatra/contrib'
-
-
 
 # models
 require 'models/user'
@@ -73,7 +73,7 @@ module Heraldify
                 article.slug = params['slug']
                 article.post_title = params['post_title']
                 article.post_content = params['post_content']
-                article.featured_image = Base64.strict_encode64(params['featured_image'])
+                article.featured_image = Base64.encode64(File.read(params['featured_image']))
                 article.author = current_user.first_name 
                 article.user_id = current_user.id
                 article.save!

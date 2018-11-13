@@ -10,7 +10,10 @@
                     <%= article['post_title'] %> 
                 </h3>
 
-                <img src="data:image/png;base64,<%= article['featured_image'] %>" />
+                <% unless article['featured_image'].empty? %>
+                <% mimeType = MIME::Types.type_for(Base64.decode64(article['featured_image'])) %>
+                    <img src="data:<%= mimeType.first %>;charset=utf-8;base64,<%= article['featured_image'] %>" />
+                <% end %>
 
                 <p>
                     <%= article['post_content'] %>
